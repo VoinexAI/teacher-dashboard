@@ -1,17 +1,13 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "package.json",
       "use": "@vercel/next"
     }
   ],
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "regions": ["iad1"],
-  "framework": "nextjs",
-  "buildCommand": "next build",
-  "installCommand": "npm install",
-  "devCommand": "next dev",
-  "outputDirectory": ".next"
+  "functions": {
+    "app/**": {
+      "maxDuration": 60
+    }
+  }
 }
