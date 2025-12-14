@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   images: {
     domains: ['localhost', 'your-vercel-app.vercel.app'], // Replace with your Vercel app URL
   },
@@ -19,8 +18,6 @@ const nextConfig = {
     // Add any webpack config customizations here
     return config;
   },
-  // Enable static exports
-  output: 'standalone',
   // Add environment variables
   env: {
     NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL || 'https://your-vercel-app.vercel.app',
